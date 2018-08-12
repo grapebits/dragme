@@ -1,5 +1,5 @@
 # dragme
-Drag::me IDE for C language is a visual IDE for C language.
+Dragme IDE for C language is a visual IDE for C language.
 
 It has two ground : Playground and Code-ground.
 
@@ -15,8 +15,8 @@ It shows Error on the next page.
 Drag::me is a Smart and Visual IDE for C language, basically created for both professional and educational purpose.
 
 Direct Download:
-https://mega.nz/#!a7hh2ITJ!Sw6rW2kvnmmcmG2pAov__sKUzVXnZ986_-D9CUweW3o
+http://www.softpedia.com/get/Programming/Coding-languages-Compilers/Dragme-IDE.shtml
 
-Size: 56.6 mb
+Size: 56 mb
 
 Developed by : Harsh Mishra
