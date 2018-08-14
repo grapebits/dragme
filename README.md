@@ -17,6 +17,8 @@ Drag::me is a Smart and Visual IDE for C language, basically created for both pr
 Direct Download:
 http://www.softpedia.com/get/Programming/Coding-languages-Compilers/Dragme-IDE.shtml
 
+<a href="https://sourceforge.net/projects/dragme/files/latest/download"><img alt="Download Dragme" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>
+
 Size: 56 mb
 
 Developed by : Harsh Mishra
