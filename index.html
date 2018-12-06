@@ -1,0 +1,213 @@
+<!-- Copyright 2018 Harsh Mishra. harsh.mi@live.com All right reserved-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <title>Playground | Dragme IDE</title>
+
+  <link rel="stylesheet" href="js/style.css">
+  <script src="js/blockly_compressed.js"></script>
+  <script src="js/blocks_compressed.js"></script>
+  <script src="js/customblocks.js"></script>
+  <script src="js/javascript_compressed.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/code.js"></script>
+  <script src="js/load.js"></script>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/image/grape.gif" />
+  <link href="assets/css/home.css" rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="assets/cssmenu/apple/styles.css">
+</head>
+
+<body>
+<div id="content">
+
+  <div id="header">
+    <img src="assets/image/grape_edit.gif" alt="Logo GrapeBits">
+    <p class="hp"><br /><big><big><b>Dragme IDE</b></big></big> : for C language
+      <br />You are using Dragme v2.0 ,created by <a href="http://hkmishra.github.io">Harsh Mishra</a>.
+      <br />Do you have questions or need help? Visit our <a href="http://hkmishra.github.io">support</a>.
+    </p>
+  </div>
+
+</div>
+  <table width="100%" height="80%">
+    <tr>
+      <td>
+      </td>
+      <td class="farSide">
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+        <div id='cssmenu'>
+          <ul>
+            <li class='tabon'><a id="tab_blocks"><span>Blocks</span></a></li>
+            <li class='taboff' id="tab_javascript"><a><span>Code</span></a></li>
+            <li class='taboff'><a>Load</a>
+              <ul>
+                <li><a onclick="loadhelloworld();">Hello World</a></li>
+                <li><a onclick="load1to10()">Print 1 to 10</a></li>
+                <li><a onclick="loadgetandprintchar();">Get and Print Character</a></li>
+                <li><a onclick="loadoddeven();">Odd Even</a></li>
+                <li><a onclick="loadpyramid();">Pyramid</a></li>
+                <li><a onclick="loadfactorial()">Factorial</a></li>
+              </ul>
+            </li>
+
+            <li class='taboff'><a><span>Help</span></a>
+              <ul>
+                <li class='taboff'><a href="help.html" target="_blank"><span>Help</span></a></li>
+                <li class='last'><a onclick='alert("About Dragme IDE\n----------------------------------------------------\nDragme IDE is a visual IDE for C \nlanguage, built for both professional\nand educational purpose by Harsh Mishra\nunder name GrapeBits.\n----------------------------------------------------\nDeveloped by: Harsh Mishra\nCheck Harsh: http://hkmishra.github.io\nmail: harsh.mi@live.com\nweb: http://github.com/grapebits\nPlayStore: @GrapeBits");'><span>About</span></a></li>
+              </ul>
+            </li>
+                                  <li class='logout'>
+              <button id="trashButton" class="notext" title="...">
+              <img src='media/1x1.gif' class="trash icon21">
+            </button>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="99%" colspan=2 id="content_area">
+      </td>
+    </tr>
+  </table>
+  <div id="content_blocks" class="content"></div>
+  <pre id="content_javascript" class="content"></pre>
+  <pre id="content_python" class="content"></pre>
+  <pre id="content_php" class="content"></pre>
+  <pre id="content_lua" class="content"></pre>
+  <pre id="content_dart" class="content"></pre>
+  <textarea id="content_xml" class="content" wrap="off"></textarea>
+<div id="footer" height="5%" width="100%">
+  <p class="fp">Copyright &copy; 2018 <a href="http://hkmishra.github.io">Harsh Mishra - GrapeBits</a></p>
+</div>
+  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+  <xml id="toolbox" style="display: none">
+    <category name="Control" colour="0">
+      <block type="start"></block>
+    </category>
+
+    <category name="Input/output" colour="65">
+      <label text="Output" web-class="myLabelStyle"></label>
+      <block type="print"></block>
+      <block type="string"></block>
+      <block type="d_type"></block>
+      <block type="blank_line"></block>
+      <label text="Input" web-class="myLabelStyle"></label>
+      <block type="get"></block>
+    </category>
+
+    <category name="{catLogic}" colour="210">
+      <block type="controls_if"></block>
+      <block type="switch"></block>
+      <block type="jump_to"></block>
+      <block type="label"></block>
+      <block type="logic_compare"></block>
+      <block type="logic_operation"></block>
+      <block type="logic_negate"></block>
+      <block type="logic_boolean"></block>
+    </category>
+    <category name="{catLoops}" colour="120">
+      <block type="controls_whileUntil"></block>
+      <block type="do_while"></block>
+      <block type="testme">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="BY">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="controls_flow_statements"></block>
+    </category>
+    <category name="{catMath}" colour="230">
+      <block type="math_number"></block>
+      <block type="math_arithmetic2">
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_number_property2">
+        <value name="NUMBER_TO_CHECK">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_modulo">
+        <value name="DIVIDEND">
+          <shadow type="math_number">
+            <field name="NUM">64</field>
+          </shadow>
+        </value>
+        <value name="DIVISOR">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+    </category>
+    <sep></sep>
+    <category name="Variables" colour="330">
+      <block type="variable"></block>
+      <block type="set_variable"></block>
+      <block type="variable_name"></block>
+    </category>
+    <category name="Text" colour="330">
+      <block type="text_var"></block>
+      <block type="copy_text_var"></block>
+      <block type="length_text"></block>
+      <block type="concat_text"></block>
+      <block type="concat2_text"></block>
+    </category>
+  </xml>
+
+  <div>
+    <form id="frm1" method="get" action="result.jsp" target="_blank">
+      <textarea id = "textareafor_c" name="code"></textarea>
+    </form>
+  </div>
+  <p id="content_forc" class="content_forc" wrap="off">Code will be here</p>
+  <p id="title">.</p>
+  <p id="tab_python" class="taboff"></p>
+  <p id="tab_php" class="taboff"></p>
+  <p id="tab_lua" class="taboff"></p>
+  <p id="tab_dart" class="taboff"></p>
+<p class='taboff' id="tab_xml"></p>
+  <select id="languageMenu"></select>
+<td class="tabmax">
+  <button id="1trashButton" class="notext" title="...">
+    <img src='media/1x1.gif' class="trash icon21">
+  </button>
+  <p id="linkButton" class="notext" title="...">
+  </p>
+  <p id="1runButton" class="notext primary" title="...">
+  </p>
+</td>  
+ <li class='taboff'><a href="codeground.html" target="_blank">Codeground</a></li>
+<li class='logout'><a id="runButton"><span><img src='media/1x1.gif' class="run icon21"></span><big>   Run</big></a></li> 
+
+</body>
+</html>
